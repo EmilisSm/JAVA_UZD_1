@@ -4,17 +4,12 @@ public class Books {
     public int Year;
     public boolean isEvail = true;
 
-    public Books(String Name, String Author, int Year){
+    public Books(String Name, String Author, int Year, boolean isEvail){
         this.Name = Name;
         this.Author = Author;
         this.Year = Year;
+        this.isEvail = isEvail;
+
     }
 
-    public void bookTaken(){
-        isEvail = false;
-    }
-
-    public void bookReturned(){
-        isEvail = true;
-    }
 }

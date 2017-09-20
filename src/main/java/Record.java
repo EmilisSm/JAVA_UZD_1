@@ -6,8 +6,9 @@ public class Record {
     LocalDate twoMonthLater = dateOfRecord.plusMonths(2);
     public boolean isReturned = false;
 
-    public Record(String BookName){
+    public Record(String BookName, String UserName, String UserLast){
         this.BookName = BookName;
+        this.isReturned = isReturned;
     }
 
     public void getDateRet(){
