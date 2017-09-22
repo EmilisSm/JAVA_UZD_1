@@ -9,6 +9,7 @@ public class Library {
     }
 
     List<Books> ListBooks = new ArrayList<Books>();
+    List<Record> BookRecords = new ArrayList<Record>();
 
     public void onCreate(){
         ListBooks.add(new Books("OOP Programming", "Harry Main", 2009, true));
@@ -53,5 +54,24 @@ public class Library {
             }
         }
         return false;
+    }
+    public void getRecord(String bookName, String UserName, String UserLast){
+        BookRecords.add(new Record(bookName, UserName, UserLast));
+        for(Record i : BookRecords) {
+            if(i.BookName.equals(bookName)){
+                System.out.println("Book name: " + i.BookName);
+                System.out.println("User name: " + i.UName + ' ' + i.ULast);
+                i.getDateRet();
+                System.out.println("------------------------");
+            }
+        }
+    }
+    public void showRecords(){
+        for(Record i : BookRecords) {
+            System.out.println("Book name: " + i.BookName);
+            System.out.println("User name: " + i.UName + ' ' + i.ULast);
+            i.getDateRet();
+            System.out.println("------------------------");
+        }
     }
 }
